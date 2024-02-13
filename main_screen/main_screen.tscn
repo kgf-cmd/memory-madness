@@ -1,4 +1,11 @@
-[gd_scene format=3 uid="uid://dvo0wn0mi7tly"]
+[gd_scene load_steps=4 format=3 uid="uid://dvo0wn0mi7tly"]
+
+[ext_resource type="FontFile" uid="uid://ss5pyfcxora1" path="res://assets/fonts/LuckiestGuy-Regular.ttf" id="1_jr0q8"]
+[ext_resource type="PackedScene" uid="uid://b6j3clf8vkrrf" path="res://front_sprite/front_sprite.tscn" id="2_863i6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6vwh6"]
+font = ExtResource("1_jr0q8")
+font_size = 84
 
 [node name="MainScreen" type="Control"]
 layout_mode = 3
@@ -16,3 +23,55 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.360784, 0.462745, 1, 0.305882)
+
+[node name="VB" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Spacer4" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VB"]
+layout_mode = 2
+text = "Memory Madness"
+label_settings = SubResource("LabelSettings_6vwh6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer3" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBLevels" type="HBoxContainer" parent="VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Spacer2" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBSprites" type="HBoxContainer" parent="VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 72
+
+[node name="FrontSprite" parent="VB/HBSprites" instance=ExtResource("2_863i6")]
+layout_mode = 2
+
+[node name="FrontSprite2" parent="VB/HBSprites" instance=ExtResource("2_863i6")]
+layout_mode = 2
+
+[node name="FrontSprite3" parent="VB/HBSprites" instance=ExtResource("2_863i6")]
+layout_mode = 2
+
+[node name="FrontSprite4" parent="VB/HBSprites" instance=ExtResource("2_863i6")]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="VB"]
+layout_mode = 2
+size_flags_vertical = 3
