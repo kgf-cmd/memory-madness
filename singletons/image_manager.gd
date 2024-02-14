@@ -33,3 +33,7 @@ func load_items_images() -> void:
 		if ".import" not in fn:
 			add_file_to_list(fn, path)
 	print("loaded:", _item_images.size())
+
+func get_random_item_image() -> Dictionary:
+	return _item_images.pick_random()
+
