@@ -26,12 +26,11 @@ func get_moves_made_str() -> String:
 func get_pairs_made_str() -> String:
 	return "%s / %s" % [ _pairs_made, _target_pairs ]
 
-func clear_new_game(_target_pairs: int) ->void:
+func clear_new_game(target_pairs: int) ->void:
 	_selections.clear()
 	_pairs_made = 0
 	_moves_made = 0
-	_target_pairs = 0
-	_target_pairs = _target_pairs
+	_target_pairs = target_pairs
 	
 	
 func selections_are_pair() -> bool:
